@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMAL STERILIZATION FORM</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <h1>ANIMAL STERILIZATION FORM</h1>
+    <form action="/submit-sterilization-form" method="POST">
+        <fieldset>
+            <legend>ANIMAL INFORMATION</legend>
+            <label for="animal-type">ANIMAL TYPE</label>
+            <input type="text" id="animal-type" name="animal-type" required>
+            <br>
+            <label for="animal-age">AGE:</label>
+            <input type="number" id="animal-age" name="animal-age" required>
+            <br>
+            <label for="animal-gender">GENDER:</label>
+            <select id="animal-gender" name="animal-gender" required>
+                <option value="male">MALE</option>
+                <option value="female">FEMALE</option>
+            </select>
+            <br>
+            <label for="animal-weight">WEIGHT (kg):</label>
+            <input type="number" id="animal-weight" name="animal-weight" required step="0.1">
+        </fieldset>
+
+        <fieldset>
+            <legend>VETERINARY INFORMATION</legend>
+            <label for="vet-name">VETERINARY NAME: </label>
+            <input type="text" id="vet-name" name="vet-name" required>
+            <br>
+            <label for="vet-contact">CONTACT INFORMATION:</label>
+            <input type="tel" id="vet-contact" name="vet-contact" required>
+            <br>
+            <label for="vet-address">ADDRESS: </label>
+            <textarea id="vet-address" name="vet-address" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>APPROVAL AND SIGNATURE</legend>
+            <label for="owner-name">OWNER: </label>
+            <input type="text" id="owner-name" name="owner-name" required>
+            <br>
+            <label for="owner-signature">SIGN: </label>
+            <input type="text" id="owner-signature" name="owner-signature" required>
+        </fieldset>
+
+        <button type="submit">SEND FORM</button>
+    </form>
+</body>
+
+</html>
